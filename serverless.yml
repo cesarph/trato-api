@@ -1,0 +1,52 @@
+service: trato-pokemon
+
+provider:
+  name: aws
+  region: us-east-1
+  stage: dev
+  runtime: nodejs10.x
+
+functions:
+  list:
+    handler: handler.list
+    events:
+      - http:
+          path: pokemon
+          method: get
+          cors: true
+
+  get:
+    handler: handler.get
+    events:
+      - http:
+          path: pokemon/{id}
+          method: get
+          cors: true
+
+  create:
+    handler: handler.create
+    events:
+      - http:
+          path: pokemon
+          method: post
+          cors: true
+
+  update:
+    handler: handler.update
+    events:
+      - http:
+          path: pokemon/{id}
+          method: put
+          cors: true
+
+  delete:
+    handler: handler.delete
+    events:
+      - http:
+          path: pokemon/{id}
+          method: delete
+          cors: true
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin

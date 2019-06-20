@@ -1,0 +1,17 @@
+{
+  "name": "trato-pokemon",
+  "version": "1.0.0",
+  "description": "Serverless Pokemon REST API ",
+  "main": "handler.js",
+  "dependencies": {
+    "mongoose": "^5.6.0",
+    "serverless-dotenv-plugin": "^2.1.1",
+    "validator": "^11.0.0"
+  },
+  "author": "César Palazuelos Higuera",
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^8.0.0",
+    "serverless-offline": "^5.4.2"
+  }
+}
