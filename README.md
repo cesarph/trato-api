@@ -5,6 +5,8 @@ A Pokemon Serverless Node.js API
 
 *Create*
 
+path: `/pokemon`
+
 ```bash
 curl -XPOST -H "Content-type: application/json" -d '{
 	"dexId": 7,
@@ -28,6 +30,8 @@ curl -XPOST -H "Content-type: application/json" -d '{
 
 
 *READ ALL*
+
+path: `/pokemon`
 
 ```bash
 curl -XGET -H "Content-type: application/json" 'https://zra1bg2zwl.execute-api.us-east-1.amazonaws.com/dev/pokemon'
@@ -90,7 +94,9 @@ curl -XGET -H "Content-type: application/json" 'https://zra1bg2zwl.execute-api.u
 }
 ```
 
-*READ ONE*
+*READ ONE* 
+
+path: `/pokemon/:id`
 
 ```bash
 curl -XGET -H "Content-type: application/json" 'https://zra1bg2zwl.execute-api.us-east-1.amazonaws.com/dev/pokemon/1'
@@ -110,6 +116,8 @@ curl -XGET -H "Content-type: application/json" 'https://zra1bg2zwl.execute-api.u
 ```
 
 *UPDATE*
+
+path: `/pokemon/:id`
 
 ```bash
 curl -XPUT -H "Content-type: application/json" -d '{
@@ -131,6 +139,8 @@ curl -XPUT -H "Content-type: application/json" -d '{
 ```
 
 *DELETE*
+
+path: `/pokemon/:id`
 
 ```bash
 curl -XDELETE -H "Content-type: application/json" 'https://zra1bg2zwl.execute-api.us-east-1.amazonaws.com/dev/pokemon/6'
