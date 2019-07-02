@@ -4,13 +4,21 @@ const connectToDB = require('./db');
 
 const createErrorResponse = (statusCode, message) => ({
   statusCode: statusCode || 501,
-  headers: { 'Content-Type': 'application/json' },
+  headers: { 
+    'Content-Type': 'application/json', 
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Credentials': true, 
+  },
   body: JSON.stringify({ message })
 });
 
 const createSuccessResponse = (data) => ({
   statusCode: 200,
-  headers: { 'Content-Type': 'application/json' },
+  headers: { 
+    'Content-Type': 'application/json', 
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Credentials': true, 
+  },
   body:  JSON.stringify(data)
 });
 
